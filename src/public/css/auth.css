@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Hiragino Mincho Pro', sans-serif;
+    background: url('/images/background.jpg.jpg') no-repeat center center fixed;
+    background-size: cover;
+    color: #4B4B4B;
+    min-height: 100vh;
+}
+.auth-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 100px);
+    /* ヘッダー・フッターを除いた高さ */
+}
+
+.auth-card {
+    background-color: white;
+    padding: 0px 30px 20px 30px;
+    width: 580px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 16px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.auth-title {
+    font-size: 60px;
+    font-weight: 400;
+    font-family: 'Lora', serif;
+    color: #EC87EF;
+    margin-bottom: 2px;
+}
+
+.auth-subtitle {
+    font-size: 18px;
+    font-weight: 500;
+    margin-bottom: 50px;
+}
+
+.auth-form-group {
+    text-align: left;
+    margin-bottom: 30px;
+}
+
+.auth-form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.auth-form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 14px;
+    box-sizing: border-box;
+}
+
+.auth-button {
+    display: inline-block;
+    width: 250px;
+    height: 50px;
+    padding: 13px 30px;
+    gap: 10px;
+    border-radius: 10px;
+    background: linear-gradient(to right, #A3A6E1, #FFABD9);
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.auth-footer {
+    margin-top: 20px;
+    font-size: 15px;
+    font-weight: 200px;
+}
+
+.auth-footer a {
+    color: #2C99FF;
+    text-decoration: underline;
+}
+
+.auth-description {
+    font-size: 14px;
+    margin-top: -10px;
+    margin-bottom: 30px;
+    color: #4B4B4B;
+    text-align: center;
+    word-break: break-word;
+}
+
+.register-card {
+    min-height: 600px;
+    padding: 60px 40px;
+}
+
+.error {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+}
