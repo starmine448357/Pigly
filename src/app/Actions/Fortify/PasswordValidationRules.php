@@ -15,4 +15,17 @@ trait PasswordValidationRules
     {
         return ['required', 'string', Password::default(), 'confirmed'];
     }
+
+    
 }
+return [
+    // 他のルールと一緒に…
+
+    'confirmed' => ':attributeが一致しません。',
+    
+    'attributes' => [
+        'password' => 'パスワード',
+        // 他に使ってるカラム名もここに入れると綺麗に表示される
+    ],
+];
+

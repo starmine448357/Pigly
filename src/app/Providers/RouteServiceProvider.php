@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Route;
 
 class RouteServiceProvider extends ServiceProvider
 {
-    public const HOME = '/weight_logs';
+    public const HOME = '/weight_logs/create';
 
     public function boot(): void
     {

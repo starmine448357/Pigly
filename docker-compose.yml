@@ -4,7 +4,7 @@ services:
   nginx:
     image: nginx:1.21.1
     ports:
-      - "8080:80"
+      - "8085:80"
     volumes:
       - ./docker/nginx/default.conf:/etc/nginx/conf.d/default.conf
       - ./src:/var/www/
@@ -36,6 +36,6 @@ services:
       - PMA_USER=laravel_user
       - PMA_PASSWORD=laravel_pass
     ports:
-      - 8083:80
+      - 8086:80
     depends_on:
       - mysql

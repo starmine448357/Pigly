@@ -3,6 +3,8 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\WeightLogController;
 use App\Http\Controllers\Auth\RegisteredUserController;
+use App\Http\Controllers\RegisterWeightController;
+use App\Http\Controllers\WeightTargetController;
 
 /*
 |--------------------------------------------------------------------------
@@ -24,7 +26,6 @@ Route::get('/register', function () {
 */
 Route::middleware('auth')->group(function () {
     Route::get('/weight_logs', [WeightLogController::class, 'index'])->name('weight_logs.index');
-    Route::get('/weight_logs/create', [WeightLogController::class, 'create'])->name('weight_logs.create');
     Route::post('/weight_logs', [WeightLogController::class, 'store'])->name('weight_logs.store');
 });
 
@@ -39,4 +40,21 @@ Route::post('/register', [RegisteredUserController::class, 'store'])
 
 Route::get('/test', function () {
     return 'Test route is working!';
+});
+
+Route::middleware(['auth'])->group(function () {
+    Route::get('/register/step2', [RegisterWeightController::class, 'create'])->name('register.step2');
+    Route::post('/register/step2', [RegisterWeightController::class, 'store'])->name('register.step2.store');
+});
+
+Route::get('/', function () {
+    return redirect()->route('weight_logs.index');
+});
+
+Route::get('/weight_target/edit', [WeightTargetController::class, 'edit'])->name('weight_target.edit');
+
+Route::middleware('auth')->group(function () {
+    Route::get('/weight_logs', [WeightLogController::class, 'index'])->name('weight_logs.index');
+    Route::post('/weight_logs', [WeightLogController::class, 'store'])->name('weight_logs.store');
+    Route::get('/weight_logs/{id}/edit', [WeightLogController::class, 'edit'])->name('weight_logs.edit');
 });
