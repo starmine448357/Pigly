@@ -105,3 +105,95 @@ body {
     font-size: 14px;
     margin-top: 5px;
 }
+
+.register-step2-subtitle {
+    font-size: 20px;
+    /* 小さめ */
+    color: #333333;
+    /* グレー系 */
+    font-weight: normal;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+}
+
+.register-step2-description {
+    font-size: 16px;
+    color: #333333;
+    margin-bottom: 28px;
+    text-align: center;
+    letter-spacing: 0.5px;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 18px 42px 18px 36px;
+    border-radius: 0 0 16px 16px;
+    box-shadow: 0 2px 8px #C077C620;
+    margin-bottom: 32px;
+    min-height: 56px;
+}
+
+.header-title .pigly-logo {
+    font-family: 'Lora', serif;
+    font-size: 33px;
+    font-weight: 600;
+    color: #EC87EF;
+    letter-spacing: 2px;
+}
+
+.header-right {
+    display: flex;
+    gap: 18px;
+    align-items: center;
+}
+
+.header-btn {
+    text-decoration: none;
+    border: none;
+    background: none;
+    font-size: 16px;
+    padding: 0 18px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.14s;
+}
+
+.target-btn {
+    border: 1px solid #d7b0ef;
+    background: #fff;
+    color: #A174B9;
+}
+
+.target-btn:hover {
+    background: #f8eafd;
+}
+
+.logout-btn {
+    background: #fff;
+    color: #C077C6;
+    border: 1px solid #cfaad8;
+    border-radius: 8px;
+    padding: 0 18px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.14s;
+}
+
+.logout-btn:hover {
+    background: #f8eafd;
+}
+
+.logout-form {
+    display: inline;
+    margin: 0;
+}
+

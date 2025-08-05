@@ -1,0 +1,297 @@
+body {
+    background: #f5f5f7;
+}
+
+/* -----------------------------
+    メインラッパー・ヘッダー
+----------------------------- */
+.weight-logs-wrapper {
+    max-width: 1040px;
+    margin: 40px auto;
+    padding: 30px 0 80px 0;
+}
+
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #fff;
+    padding: 18px 40px 18px 36px;
+    box-shadow: 0 2px 8px #C077C620;
+    margin-bottom: 38px;
+    min-height: 58px;
+    max-width: 98%;
+    width: 100%;
+}
+
+.header-title .pigly-logo {
+    font-family: 'Lora', serif;
+    font-size: 34px;
+    font-weight: 600;
+    color: #EC87EF;
+    letter-spacing: 2px;
+}
+
+.header-right {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+}
+
+.header-btn,
+.target-btn {
+    text-decoration: none;
+    border: 1px solid #d7b0ef;
+    background: #fff;
+    color: #A174B9;
+    font-size: 16px;
+    padding: 0 20px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    border-radius: 8px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.14s;
+}
+.target-btn:hover {
+    background: #f8eafd;
+}
+.logout-btn {
+    background: #fff;
+    color: #C077C6;
+    border: 1px solid #cfaad8;
+    border-radius: 8px;
+    padding: 0 20px;
+    height: 40px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.14s;
+}
+.logout-btn:hover {
+    background: #f8eafd;
+}
+.logout-form {
+    display: inline;
+    margin: 0;
+}
+
+/* -----------------------------
+    上部3カード（大きな白カード＋縦線仕切り）
+----------------------------- */
+.weight-logs-upper-card {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px 0 #0001;
+    padding: 44px 36px 34px 36px;
+    margin-bottom: 36px;
+    width: 100%;
+    max-width: 950px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.summary-cards {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.summary-item {
+    flex: 1;
+    text-align: center;
+}
+.summary-title {
+    color: #898989;
+    font-size: 17px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+}
+.summary-value {
+    color: #353535;
+    font-size: 38px;
+    font-family: 'Lora', serif;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+.summary-value .unit {
+    font-size: 16px;
+    margin-left: 2px;
+    color: #bbb;
+    font-family: 'Inter', sans-serif;
+    font-weight: normal;
+}
+.summary-divider {
+    width: 2px;
+    height: 60px;
+    background: #eee;
+    margin: 0 24px;
+    border-radius: 1px;
+}
+
+/* -----------------------------
+    検索・追加行
+----------------------------- */
+.weight-logs-search-add-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+}
+.weight-logs-search-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.weight-logs-search-form input[type="date"] {
+    height: 36px;
+    padding: 0 10px;
+    border: 1px solid #E3E3E3;
+    border-radius: 6px;
+    font-size: 15px;
+    background: #fff;
+}
+.date-separator {
+    margin: 0 6px;
+    color: #999;
+}
+.search-btn {
+    padding: 8px 28px;
+    background: #999;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background 0.2s;
+}
+.search-btn:hover {
+    background: #7e7e7e;
+}
+.add-btn {
+    padding: 12px 38px;
+    background: linear-gradient(90deg, #A3A6E1 10%, #FFABD9 90%);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 17px;
+    font-weight: bold;
+    border: none;
+    display: inline-block;
+    text-decoration: none;
+    text-align: center;
+    margin-left: 18px;
+    box-shadow: 0 4px 12px #C077C622;
+    transition: background 0.2s;
+}
+.add-btn:hover {
+    opacity: 0.85;
+}
+
+/* -----------------------------
+    一覧テーブル＆カード
+----------------------------- */
+.weight-logs-table-area {
+    background: #fff;
+    border-radius: 18px;
+    box-shadow: 0 6px 24px 0 #0001;
+    padding: 38px 40px 32px 40px;
+}
+.table-title {
+    font-size: 21px;
+    font-weight: bold;
+    margin-bottom: 15px;
+    color: #333;
+    letter-spacing: 1px;
+}
+.no-data {
+    color: #888;
+    padding: 32px 0 44px 12px;
+    font-size: 16px;
+}
+.weight-logs-table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-bottom: 22px;
+}
+.weight-logs-table th,
+.weight-logs-table td {
+    padding: 14px 12px;
+    text-align: center;
+}
+.weight-logs-table th {
+    background: #f6f5fa;
+    color: #555;
+    font-size: 15px;
+    border-bottom: 2px solid #ECE6F2;
+}
+.weight-logs-table td {
+    font-size: 16px;
+    background: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+/* 編集ボタン */
+.edit-btn {
+    display: inline-block;
+    border-radius: 5px;
+    padding: 4px 12px;
+    background: #f3ebfa;
+    color: #C077C6;
+    text-decoration: none;
+    font-size: 18px;
+    transition: background 0.2s;
+}
+.edit-btn:hover {
+    background: #e0d0eb;
+}
+.edit-icon {
+    font-size: 18px;
+    vertical-align: middle;
+}
+
+/* -----------------------------
+    ページネーション
+----------------------------- */
+.pagination-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+}
+.pagination {
+    display: flex;
+    list-style: none;
+    gap: 10px;
+    padding: 0;
+}
+.pagination li {
+    display: inline-block;
+}
+.pagination .page-link,
+.pagination .page-item {
+    border-radius: 50%;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #fff;
+    color: #C077C6;
+    font-size: 17px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    margin: 0 4px;
+    box-shadow: 0 2px 6px #C077C620;
+    transition: background 0.18s;
+}
+.pagination .active .page-link {
+    background: #F9E4FA;
+    color: #fff;
+    font-weight: bold;
+}
