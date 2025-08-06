@@ -16,6 +16,7 @@ return new class extends Migration
             $table->foreignId('user_id')->constrained()->onDelete('cascade');
             $table->date('date');
             $table->decimal('weight', 4,1); // 例: 62.3kg
+            $table->integer('meal_calories')->nullable();
             $table->integer('exercise_time')->nullable();
             $table->text('exercise_content')->nullable();
             $table->timestamps();

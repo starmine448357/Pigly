@@ -13,6 +13,7 @@ class WeightLog extends Model
         'user_id',
         'date',
         'weight',
+        'meal_calories',
         'exercise_time',
         'exercise_content',
     ];
