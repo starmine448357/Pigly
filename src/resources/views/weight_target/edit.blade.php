@@ -11,10 +11,14 @@
         <span class="pigly-logo">PiGLy</span>
     </div>
     <div class="header-right">
-        <a href="{{ route('weight_target.edit') }}" class="header-btn target-btn">目標体重設定</a> 
+        <a href="{{ route('weight_target.edit') }}" class="header-btn target-btn">
+            <i class="fas fa-cog"></i> 目標体重設定
+        </a>
         <form method="POST" action="{{ route('logout') }}" class="logout-form">
             @csrf
-            <button type="submit" class="logout-btn">ログアウト</button>
+            <button type="submit" class="logout-btn">
+                <i class="fas fa-door-open"></i> ログアウト
+            </button>
         </form>
     </div>
 </div>

@@ -6,20 +6,27 @@
 <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600&family=Inter:wght@400;700&display=swap" rel="stylesheet">
 @endsection
 
-@section('header')
-<div class="main-header">
-    <div class="header-title">
-        <span class="pigly-logo">PiGLy</span>
+    @section('header')
+    <div class="main-header">
+        <div class="header-title">
+            <span class="pigly-logo">PiGLy</span>
+        </div>
+        <div class="header-right">
+            <a href="{{ route('weight_target.edit') }}" class="header-btn target-btn">
+                <i class="fas fa-cog"></i> <!-- 歯車アイコン -->
+                目標体重設定
+            </a>
+            <form method="POST" action="{{ route('logout') }}" class="logout-form">
+                @csrf
+                <button type="submit" class="logout-btn">
+                    <i class="fas fa-door-open"></i> <!-- ドアアイコン -->
+                    ログアウト
+                </button>
+            </form>
+        </div>
     </div>
-    <div class="header-right">
-        <a href="{{ route('weight_target.edit') }}" class="header-btn target-btn">目標体重設定</a> 
-        <form method="POST" action="{{ route('logout') }}" class="logout-form">
-            @csrf
-            <button type="submit" class="logout-btn">ログアウト</button>
-        </form>
-    </div>
-</div>
-@endsection
+    @endsection
+
 
 @section('content')
 <div class="weight-logs-wrapper">
@@ -62,7 +69,7 @@
             <p class="search-info">{{ $searchInfo }}</p>
         @endif
 
-        <div class="table-title">体重記録一覧</div>
+        <div class="table-title"></div>
 
         @if ($weightLogs->isEmpty())
             <div class="no-data">まだ記録がありません。</div>
@@ -84,8 +91,19 @@
                         <td>{{ $log->weight }}kg</td>
                         <td>{{ $log->meal_calories ?? '-' }}cal</td>
                         <td>{{ $log->exercise_time ?? '-' }}</td>
-                        <td>
-                            <a href="{{ route('weight_logs.edit', $log->id) }}" class="edit-icon-link">✏️</a>
+                                        <td>
+                <a href="{{ route('weight_logs.edit', $log->id) }}" class="edit-btn-icon" title="編集">
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <defs>
+                    <linearGradient id="pencil-gradient" x1="0" y1="0" x2="24" y2="24" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#A3A6E1"/>
+                        <stop offset="1" stop-color="#FFABD9"/>
+                    </linearGradient>
+                    </defs>
+                    <path d="M4 20h4.586a1 1 0 0 0 .707-.293l10.586-10.586a2 2 0 0 0 0-2.828l-2.172-2.172a2 2 0 0 0-2.828 0L4.293 14.707A1 1 0 0 0 4 15.414V20z" fill="url(#pencil-gradient)"/>
+                    <path d="M14.5 6.5l3 3" stroke="#fff" stroke-width="1.5" stroke-linecap="round"/>
+                </svg>
+                </a>
                         </td>
                     </tr>
                     @endforeach
@@ -165,6 +183,8 @@
             </div>
         </form>
     </div>
+
+    
 </div>
 
 @endsection
