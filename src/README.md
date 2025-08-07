@@ -90,20 +90,14 @@ MySQL 8.0.x
 
 Docker
 
-・テーブル設計
-
 ### usersテーブル
-
 ![usersテーブル](public/images/users.png)
 
 ### weight_targetテーブル
-
 ![weight_targetテーブル](public/images/weight_target.png)
 
 ### weight_logsテーブル
-
 ![weight_logsテーブル](public/images/weight_logs.png)
 
-・ER図
-
+### ER図
 ![ER図](public/images/ER.png)
