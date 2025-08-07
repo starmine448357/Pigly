@@ -91,13 +91,13 @@ MySQL 8.0.x
 Docker
 
 ### usersテーブル
-![usersテーブル](public/images/users.png)
+![usersテーブル](src/public/images/users.png)
 
 ### weight_targetテーブル
-![weight_targetテーブル](public/images/weight_target.png)
+![weight_targetテーブル](src/public/images/weight_target.png)
 
 ### weight_logsテーブル
-![weight_logsテーブル](public/images/weight_logs.png)
+![weight_logsテーブル](src/public/images/weight_logs.png)
 
 ### ER図
-![ER図](public/images/ER.png)
+![ER図](src/public/images/ER.png)
