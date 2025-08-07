@@ -1,4 +1,4 @@
-/* モーダルオーバーレイ（背景の半透明） */
+/* --- モーダルオーバーレイ（背景の半透明） --- */
 .modal-overlay {
     position: fixed;
     top: 0;
@@ -12,7 +12,7 @@
     z-index: 2000;
 }
 
-/* モーダル本体 */
+/* --- モーダル本体 --- */
 .modal-content {
     background: #fff;
     width: 800px;
@@ -23,9 +23,10 @@
     box-shadow: 0 6px 36px 0 #0002;
     text-align: left;
     position: relative;
-    animation: fadeInModal .22s;
+    animation: fadeInModal 0.22s;
 }
 
+/* フェードインアニメーション */
 @keyframes fadeInModal {
     from {
         opacity: 0;
@@ -38,13 +39,15 @@
     }
 }
 
+/* --- モーダルタイトル --- */
 .modal-title {
     font-size: 1.5rem;
     margin-bottom: 26px;
     font-weight: bold;
-    letter-spacing: .04em;
+    letter-spacing: 0.04em;
 }
 
+/* --- フォームグループ --- */
 .form-group {
     margin-bottom: 18px;
     display: flex;
@@ -55,9 +58,10 @@
     font-weight: bold;
     margin-bottom: 5px;
     color: #444;
-    letter-spacing: .03em;
+    letter-spacing: 0.03em;
 }
 
+/* --- 必須マーク --- */
 .required {
     color: #ff5757;
     font-size: 0.95em;
@@ -65,6 +69,7 @@
     vertical-align: middle;
 }
 
+/* --- 入力欄 --- */
 .form-group input[type="text"],
 .form-group input[type="number"],
 .form-group input[type="date"],
@@ -82,6 +87,7 @@
     border: 1.8px solid #a8a6ff;
 }
 
+/* --- エラーメッセージ --- */
 .error-message {
     color: #ff5757;
     font-size: 0.94em;
@@ -89,6 +95,7 @@
     margin-left: 4px;
 }
 
+/* --- モーダルボタン群 --- */
 .modal-buttons {
     display: flex;
     justify-content: center;
@@ -96,6 +103,7 @@
     margin-top: 28px;
 }
 
+/* --- 戻るボタン --- */
 .btn-back {
     background: #F5F6FA;
     color: #222;
@@ -106,13 +114,14 @@
     cursor: pointer;
     font-weight: bold;
     box-shadow: 0 1px 3px #d5d5d5a0;
-    transition: background .16s;
+    transition: background 0.16s;
 }
 
 .btn-back:hover {
     background: #e9ebf1;
 }
 
+/* --- 登録ボタン --- */
 .btn-register {
     background: linear-gradient(93deg, #A8A6FF 12%, #FFB6D3 99%);
     color: #fff;
@@ -130,6 +139,7 @@
     filter: brightness(0.96);
 }
 
+/* --- レスポンシブ（550px以下） --- */
 @media (max-width: 550px) {
     .modal-content {
         width: 96vw;
@@ -138,13 +148,14 @@
     }
 }
 
+/* --- 必須ボックス --- */
 .required-box {
     background: #FF5757;
     color: #fff;
     display: inline-block;
     font-size: 0.95em;
     font-weight: bold;
-    padding: 2px 9px 2px 9px;
+    padding: 2px 9px;
     margin-left: 9px;
     letter-spacing: 1px;
     vertical-align: middle;
@@ -152,6 +163,7 @@
     box-shadow: 0 1px 2px #d8a2a233;
 }
 
+/* --- テキストエリア --- */
 .form-group textarea {
     padding: 12px 13px;
     border: 1.2px solid #cfcfcf;
@@ -170,11 +182,12 @@
     border: 1.8px solid #a8a6ff;
 }
 
+/* --- 単位表示行 --- */
 .input-unit-row {
     display: flex;
     align-items: center;
     justify-content: flex-end;
-    /* ←右端に寄せる場合 */
+    /* 右端寄せ */
     gap: 6px;
     width: 100%;
 }
@@ -191,6 +204,7 @@
     white-space: nowrap;
 }
 
+/* --- 入力行 --- */
 .input-unit-row {
     display: flex;
     align-items: center;
@@ -208,4 +222,3 @@
     margin-left: 2px;
     white-space: nowrap;
 }
-

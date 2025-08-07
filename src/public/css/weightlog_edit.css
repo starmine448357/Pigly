@@ -2,7 +2,7 @@
 .edit-weightlog-container {
     max-width: 600px;
     margin: 48px auto;
-    padding: 48px 32px 40px;
+    padding: 48px 32px 40px 32px;
     background: #fff;
     border-radius: 16px;
     box-shadow: 0 4px 24px 0 #0001;
@@ -16,11 +16,9 @@
     color: #222;
     margin-bottom: 32px;
     letter-spacing: 0.02em;
-    text-align: left;
-    font-family: inherit;
 }
 
-/* --- フォーム本体 --- */
+/* --- フォーム --- */
 .edit-form {
     display: flex;
     flex-direction: column;
@@ -35,6 +33,7 @@
     margin-bottom: 18px;
 }
 
+/* 横並びフォームグループ */
 .edit-form-group.form-group-row {
     flex-direction: row;
     align-items: center;
@@ -54,13 +53,14 @@
     flex-shrink: 0;
 }
 
-/* --- 入力欄 --- */
+/* --- 入力欄と単位の横並び --- */
 .edit-input-unit-row {
     display: flex;
     align-items: center;
     width: 100%;
 }
 
+/* 入力欄 */
 .edit-input {
     flex: 1 1 0;
     min-width: 0;
@@ -80,7 +80,7 @@
     background: #fff;
 }
 
-/* --- 単位 --- */
+/* 単位表示 */
 .edit-unit {
     margin-left: 6px;
     color: #242424;
@@ -90,7 +90,7 @@
     flex-shrink: 0;
 }
 
-/* --- テキストエリア --- */
+/* テキストエリア */
 .edit-textarea {
     font-size: 1rem;
     padding: 12px;
@@ -107,7 +107,7 @@
     color: #CBCBCB;
 }
 
-/* --- エラーメッセージ --- */
+/* エラーメッセージ */
 .error-message,
 .edit-error {
     color: #FF3333;
@@ -116,7 +116,7 @@
     margin-bottom: 0;
 }
 
-/* --- ボタン --- */
+/* ボタン群 */
 .edit-btn-row {
     display: flex;
     justify-content: center;
@@ -125,6 +125,7 @@
     margin-top: 28px;
 }
 
+/* ボタン共通 */
 .edit-btn {
     min-width: 120px;
     padding: 12px 0;
@@ -140,6 +141,7 @@
     transition: box-shadow 0.2s, background 0.2s;
 }
 
+/* グレー系ボタン */
 .edit-btn-gray {
     background: #E0DFDE;
     color: #000;
@@ -149,6 +151,7 @@
     background: #d4d2cd;
 }
 
+/* グラデーションボタン */
 .edit-btn-grad {
     background: linear-gradient(90deg, #A3A6E1 0%, #FFABD9 100%);
     color: #fff;
@@ -160,7 +163,7 @@
     box-shadow: 0 4px 16px #b39ddb22;
 }
 
-/* --- 削除ボタン --- */
+/* 削除ボタン */
 .edit-btn-delete {
     background: transparent;
     color: #f44336;
@@ -180,7 +183,7 @@
     color: #b71c1c;
 }
 
-/* --- 削除フォーム（右下固定） --- */
+/* 削除フォーム（右下固定） */
 .edit-delete-form {
     position: absolute;
     bottom: 16px;
@@ -189,204 +192,11 @@
     margin: 0;
 }
 
-/* --- アイコン（Material Icons/FontAwesome） --- */
+/* アイコン（Material Icons / FontAwesome） */
 .material-icons,
 .trash-icon {
     font-size: 1.8rem;
     vertical-align: middle;
     line-height: 1;
     color: #ff2323 !important;
-}
-
-.edit-weightlog-container {
-    max-width: 600px;
-    margin: 48px auto;
-    padding: 48px 32px 40px 32px;
-    background: #fff;
-    border-radius: 16px;
-    box-shadow: 0 4px 24px 0 #0001;
-    position: relative;
-}
-
-.edit-title {
-    font-size: 2rem;
-    font-weight: 600;
-    color: #222;
-    margin-bottom: 32px;
-    letter-spacing: 0.02em;
-}
-
-.form-group {
-    margin-bottom: 22px;
-}
-
-.form-group label {
-    display: block;
-    font-weight: 500;
-    margin-bottom: 6px;
-    color: #333;
-}
-
-.input-unit-row {
-    display: flex;
-    align-items: center;
-}
-
-.input-unit-row input {
-    flex: 1 1 0;
-    min-width: 0;
-    padding: 9px 12px;
-    border: 1px solid #cfcfcf;
-    border-radius: 7px;
-    font-size: 1.05rem;
-    background: #FAFAFA;
-    outline: none;
-    box-sizing: border-box;
-    transition: border 0.2s, background 0.2s;
-}
-
-.input-unit-row input:focus {
-    border: 1.5px solid #B39DDB;
-    background: #fff;
-}
-
-.input-unit {
-    margin-left: 8px;
-    color: #242424;
-    font-size: 1rem;
-    min-width: 36px;
-    text-align: right;
-    flex-shrink: 0;
-}
-
-.form-group input[type="date"],
-.form-group input[type="time"] {
-    width: 100%;
-    padding: 9px 12px;
-    border: 1px solid #cfcfcf;
-    border-radius: 7px;
-    font-size: 1.05rem;
-    background: #FAFAFA;
-    outline: none;
-    box-sizing: border-box;
-    transition: border 0.2s, background 0.2s;
-}
-
-.form-group input[type="date"]:focus,
-.form-group input[type="time"]:focus {
-    border: 1.5px solid #B39DDB;
-    background: #fff;
-}
-
-.form-group textarea {
-    width: 100%;
-    font-size: 1rem;
-    padding: 12px;
-    border: 1px solid #D8D8D8;
-    border-radius: 8px;
-    background: #FAFAFA;
-    min-height: 56px;
-    resize: vertical;
-    font-family: inherit;
-    transition: border 0.2s;
-}
-
-.form-group textarea:focus {
-    border: 1.5px solid #B39DDB;
-    background: #fff;
-}
-
-.form-group textarea::placeholder {
-    color: #CBCBCB;
-}
-
-.error-message {
-    color: #FF3333;
-    font-size: 0.97em;
-    margin-top: 6px;
-    margin-bottom: 0;
-}
-
-.modal-buttons {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 24px;
-    margin-top: 32px;
-}
-
-.btn-back {
-    min-width: 120px;
-    padding: 12px 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.08rem;
-    font-weight: 600;
-    cursor: pointer;
-    background: #E0DFDE;
-    color: #000;
-    box-shadow: 0 2px 8px #0001;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    transition: box-shadow 0.2s, background 0.2s;
-}
-
-.btn-back:hover {
-    background: #d4d2cd;
-}
-
-.btn-register {
-    min-width: 120px;
-    padding: 12px 0;
-    border: none;
-    border-radius: 8px;
-    font-size: 1.08rem;
-    font-weight: 600;
-    cursor: pointer;
-    background: linear-gradient(90deg, #A3A6E1 0%, #FFABD9 100%);
-    color: #fff;
-    box-shadow: 0 2px 8px #0001;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    transition: box-shadow 0.2s, background 0.2s;
-}
-
-.btn-register:hover {
-    filter: brightness(0.97);
-    box-shadow: 0 4px 16px #b39ddb22;
-}
-
-.edit-delete-form {
-    position: absolute;
-    bottom: 16px;
-    right: 16px;
-    display: inline-block;
-    margin: 0;
-}
-
-.btn-delete {
-    background: transparent;
-    color: #f44336;
-    padding: 0 12px;
-    font-size: 1.8rem;
-    border: none;
-    box-shadow: none;
-    transition: color 0.2s;
-    vertical-align: middle;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.btn-delete:hover {
-    color: #b71c1c;
-}
-
-.trash-icon {
-    font-size: 1.8rem;
-    vertical-align: middle;
-    color: #ff2323 !important;
-    line-height: 1;
 }

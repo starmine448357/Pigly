@@ -1,4 +1,7 @@
-body {
+/* ----------------------------------------
+   全体設定
+---------------------------------------- */
+.app-body {
     margin: 0;
     padding: 0;
     font-family: 'Hiragino Mincho Pro', sans-serif;
@@ -7,17 +10,19 @@ body {
     color: #4B4B4B;
     min-height: 100vh;
 }
+/* ----------------------------------------
+   認証・フォーム関連コンテナ
+---------------------------------------- */
 .auth-container {
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: calc(100vh - 100px);
-    /* ヘッダー・フッターを除いた高さ */
 }
 
 .auth-card {
     background-color: white;
-    padding: 0px 30px 20px 30px;
+    padding: 0 30px 20px 30px;
     width: 580px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
     border-radius: 16px;
@@ -25,6 +30,7 @@ body {
     text-align: center;
 }
 
+/* タイトル・サブタイトル */
 .auth-title {
     font-size: 60px;
     font-weight: 400;
@@ -39,6 +45,7 @@ body {
     margin-bottom: 50px;
 }
 
+/* フォームグループ */
 .auth-form-group {
     text-align: left;
     margin-bottom: 30px;
@@ -59,6 +66,7 @@ body {
     box-sizing: border-box;
 }
 
+/* 送信ボタン */
 .auth-button {
     display: inline-block;
     width: 250px;
@@ -75,17 +83,25 @@ body {
     margin-top: 20px;
 }
 
+/* フッター */
 .auth-footer {
     margin-top: 20px;
     font-size: 15px;
-    font-weight: 200px;
+    font-weight: 200;
 }
 
 .auth-footer a {
+    text-decoration: none;
+    font-weight: 600;
     color: #2C99FF;
-    text-decoration: underline;
 }
 
+.auth-footer a:hover {
+    text-decoration: none;
+}
+
+
+/* 補足説明 */
 .auth-description {
     font-size: 14px;
     margin-top: -10px;
@@ -95,19 +111,20 @@ body {
     word-break: break-word;
 }
 
+/* 登録カード */
 .register-card {
     min-height: 600px;
     padding: 60px 40px;
 }
 
-
-
+/* エラーメッセージ */
 .error {
     color: red;
     font-size: 14px;
     margin-top: 5px;
 }
 
+/* ステップ2用サブタイトル */
 .register-step2-subtitle {
     font-size: 20px;
     /* 小さめ */
@@ -118,6 +135,7 @@ body {
     letter-spacing: 1px;
 }
 
+/* ステップ2用説明文 */
 .register-step2-description {
     font-size: 16px;
     color: #333333;
@@ -126,6 +144,9 @@ body {
     letter-spacing: 0.5px;
 }
 
+/* ----------------------------------------
+   ヘッダー関連
+---------------------------------------- */
 .main-header {
     display: flex;
     justify-content: space-between;
@@ -152,6 +173,7 @@ body {
     align-items: center;
 }
 
+/* ボタン共通 */
 .header-btn {
     text-decoration: none;
     border: none;
@@ -167,6 +189,7 @@ body {
     transition: background 0.14s;
 }
 
+/* 目標設定ボタン */
 .target-btn {
     border: 1px solid #d7b0ef;
     background: #fff;
@@ -177,6 +200,7 @@ body {
     background: #f8eafd;
 }
 
+/* ログアウトボタン */
 .logout-btn {
     background: #fff;
     color: #C077C6;
@@ -194,8 +218,8 @@ body {
     background: #f8eafd;
 }
 
+/* ログアウトフォーム */
 .logout-form {
     display: inline;
     margin: 0;
 }
-

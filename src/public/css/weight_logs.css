@@ -1,4 +1,7 @@
-body {
+/* ===============================
+   全体ベース
+=============================== */
+.app-body {
     background: #f5f5f7;
 }
 
@@ -32,7 +35,7 @@ body {
     align-items: center;
 }
 
-/* ヘッダーの2大ボタン */
+/* ヘッダーの主要ボタン共通 */
 .header-btn,
 .logout-btn {
     display: flex;
@@ -312,11 +315,6 @@ body {
     vertical-align: middle;
 }
 
-.edit-icon-link {
-    color: #ffffff !important;
-    text-decoration: none !important;
-}
-
 /* 削除ボタン */
 .delete-form {
     position: absolute;
@@ -385,10 +383,11 @@ body {
 /* 選択中のページ */
 .pagination .active {
     background: linear-gradient(90deg, #A3A6E1 0%, #FFABD9 100%) !important;
-    color: #fff ;
-    border: none ;
-    border-radius: 5px ;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
 }
+
 /* ホバー時（選択していないページ） */
 .pagination a:hover {
     background: linear-gradient(90deg, #E5DEF9 0%, #FFD4E6 100%);
@@ -407,4 +406,3 @@ body {
 .pagination .arrow:hover {
     color: #333;
 }
-

@@ -5,6 +5,9 @@
 <link rel="stylesheet" href="{{ asset('css/weight_target_edit.css') }}">
 @endsection
 
+@section('body-class', 'app-body')
+
+
 @section('header')
 <div class="main-header">
     <div class="header-title">

@@ -4,6 +4,8 @@
 <link rel="stylesheet" href="{{ asset('css/auth.css') }}">
 @endsection
 
+@section('body-class', 'app-body')
+
 @section('content')
 <div class="auth-container">
     @component('auth.components.form-card', [
@@ -15,28 +17,49 @@
         'footer' => '<a href="' . route('login') . '">ログインはこちら</a>',
         'cardClass' => 'auth-card register-card'
     ])
-        <!-- 名前 -->
+        {{-- 名前入力フォーム --}}
         <div class="auth-form-group">
             <label for="name">名前</label>
-            <input type="text" name="name" id="name" value="{{ old('name') }}" required autofocus placeholder="名前を入力">
+            <input
+                type="text"
+                name="name"
+                id="name"
+                value="{{ old('name') }}"
+                required
+                autofocus
+                placeholder="名前を入力"
+            >
             @error('name')
                 <p class="error">{{ $message }}</p>
             @enderror
         </div>
 
-        <!-- メールアドレス -->
+        {{-- メールアドレス入力フォーム --}}
         <div class="auth-form-group">
             <label for="email">メールアドレス</label>
-            <input type="email" name="email" id="email" value="{{ old('email') }}" required placeholder="メールアドレスを入力">
+            <input
+                type="email"
+                name="email"
+                id="email"
+                value="{{ old('email') }}"
+                required
+                placeholder="メールアドレスを入力"
+            >
             @error('email')
                 <p class="error">{{ $message }}</p>
             @enderror
         </div>
 
-        <!-- パスワード -->
+        {{-- パスワード入力フォーム --}}
         <div class="auth-form-group">
             <label for="password">パスワード</label>
-            <input type="password" name="password" id="password" required placeholder="パスワードを入力">
+            <input
+                type="password"
+                name="password"
+                id="password"
+                required
+                placeholder="パスワードを入力"
+            >
             @error('password')
                 <p class="error">{{ $message }}</p>
             @enderror

@@ -6,25 +6,23 @@ use App\Http\Controllers\Auth\RegisteredUserController;
 use App\Http\Controllers\RegisterWeightController;
 use App\Http\Controllers\WeightTargetController;
 
-
 /*
 |--------------------------------------------------------------------------
-| ログイン・会員登録画面（Fortify用・カスタムビュー）
+| 認証関連ルート（Fortifyカスタムビュー）
 |--------------------------------------------------------------------------
 */
+
+// ログイン画面（未認証のみ）
 Route::get('/login', function () {
     return view('auth.login');
 })->middleware('guest')->name('login');
 
+// 会員登録画面（未認証のみ）
 Route::get('/register', function () {
     return view('auth.register');
 })->middleware('guest')->name('register');
 
-/*
-|--------------------------------------------------------------------------
-| 会員登録POST（Fortify用）
-|--------------------------------------------------------------------------
-*/
+// 会員登録POST処理（Fortify）
 Route::post('/register', [RegisteredUserController::class, 'store'])
     ->middleware('guest')
     ->name('register');
@@ -41,44 +39,47 @@ Route::middleware('auth')->group(function () {
 
 /*
 |--------------------------------------------------------------------------
-| 認証必須エリア（WeightLog）
+| 認証必須エリア（体重記録管理）
 |--------------------------------------------------------------------------
 */
 Route::middleware('auth')->group(function () {
 
-    // トップ（一覧）
+    // トップページは体重記録一覧へリダイレクト
     Route::get('/', fn() => redirect()->route('weight_logs.index'));
+
+    // 体重記録一覧
     Route::get('/weight_logs', [WeightLogController::class, 'index'])->name('weight_logs.index');
 
-    // 体重登録
+    // 体重記録作成フォーム
     Route::get('/weight_logs/create', [WeightLogController::class, 'create'])->name('weight_logs.create');
+
+    // 体重記録保存
     Route::post('/weight_logs', [WeightLogController::class, 'store'])->name('weight_logs.store');
 
-    // 体重検索
+    // 体重記録検索
     Route::get('/weight_logs/search', [WeightLogController::class, 'search'])->name('weight_logs.search');
 
-    // 体重詳細
+    // 体重記録詳細表示
     Route::get('/weight_logs/{weightLogId}', [WeightLogController::class, 'show'])->name('weight_logs.show');
 
-    // 体重更新（編集フォーム表示・保存）
+    // 体重記録編集フォーム表示
     Route::get('/weight_logs/{weightLogId}/update', [WeightLogController::class, 'edit'])->name('weight_logs.edit');
+
+    // 体重記録更新処理
     Route::put('/weight_logs/{weightLogId}/update', [WeightLogController::class, 'update'])->name('weight_logs.update');
 
-    // 体重削除
+    // 体重記録削除
     Route::delete('/weight_logs/{weightLogId}/delete', [WeightLogController::class, 'destroy'])->name('weight_logs.destroy');
 
-    // 目標体重編集（コントローラ未実装のためコメントアウト）
-    // Route::get('/weight_target/edit', [WeightTargetController::class, 'edit'])->name('weight_target.edit');
-    // Route::post('/weight_target/update', [WeightTargetController::class, 'update'])->name('weight_target.update');
+    // 目標体重編集（コントローラ未実装だったものを下に移動し有効化）
+    Route::get('/weight_target/edit', [WeightTargetController::class, 'edit'])->name('weight_target.edit');
+    Route::put('/weight_target/update', [WeightTargetController::class, 'update'])->name('weight_target.update');
 });
 
 /*
 |--------------------------------------------------------------------------
 | テスト用ルート（開発・動作確認用。不要なら削除OK）
 |--------------------------------------------------------------------------
-*/
+
 Route::get('/test', fn() => 'Test route is working!');
-
-Route::get('/weight_target/edit', [WeightTargetController::class, 'edit'])->name('weight_target.edit');
-
-Route::put('/weight_target/update', [WeightTargetController::class, 'update'])->name('weight_target.update');
+*/
